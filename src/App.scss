@@ -1,0 +1,50 @@
+@import "./variables/variables.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
+button.primary-btn {
+    @include Button($primaryColor , 150px);
+    @include r(500)  { 
+        @include Button($primaryColor , fit-content);
+            font-size: 0.7rem;
+        }
+}
+
+button.dark-btn{
+    @include Button($darkColor,inherit);
+    @include r(500)  { 
+        @include Button($darkColor , fit-content);
+            font-size: 0.7rem;
+        }
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+.App{
+    width: 100%;
+}

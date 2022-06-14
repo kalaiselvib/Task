@@ -1,0 +1,346 @@
+@import "../../variables/variables.scss";
+@import "../fonts.scss";
+.homepage-wrapper {
+    background-color: $secondaryColor;
+    .headline-text {
+        padding: 0.5rem;
+        text-align: center;
+        background-color: #fff;
+        margin-bottom: 1rem;
+       
+        h3{
+            font-family: "Myriad-Bold";
+            @include r(500)  { font-size: 0.9rem; }
+        }
+        .small-text{
+            font-family: "Myriad-Light";
+            padding: 0.4rem 1.5rem;
+            font-size: 0.9rem;
+            @include r(500)  { font-size: 0.7rem; }
+        }
+    }
+    .slider {
+        position: relative;
+        margin: 0rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include r(500)  { margin: 0rem 0rem 1rem; }
+        .arrow{
+            position: absolute;
+            top: 50%;
+            font-size: 3rem;
+            color: #fff;
+            z-index: 10;
+            cursor: pointer;
+            user-select: none;
+            background-color: #181818;
+            box-shadow: 0 4px 9px rgba(2, 2, 2, 0.08);
+            opacity: 0.4;
+            width: 40px;
+            height: 40px;
+            
+            @include r(500)  { font-size: 1rem;
+                width: 20px;
+                height: 20px;
+             }
+        }
+        .right-arrow {
+            right: 0px;
+          }
+          
+          .left-arrow {
+          
+            left: 0px;
+            
+          }
+          .slide {
+            opacity: 0;
+            transition-duration: 1s ease;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &.active{
+                opacity: 1;
+                transition-duration: 1s;
+                transform: scale(1.08);
+            }
+          }
+          
+         
+      }
+      
+     
+    
+      
+    
+    .categories-nav {
+        background-color: $darkColor;
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Myriad-Regular";
+        @include r(500)  { 
+            padding: 0.3rem 0rem;
+            font-size: 0.9rem;
+            justify-content: center;
+             }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            @include r(500)  { 
+                padding: 0.3rem 0.5rem;
+                
+                 }
+            li {
+                display: inline-block;
+               
+                margin-bottom: 0.5rem;
+                @include r(500)  { 
+                    margin-bottom: 10px;
+                  
+                     }
+                a {
+                    color: $secondaryColor;
+                    margin: 0px 15px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    @include r(500)  { 
+                        margin: 0px 10px 0px 0px;
+                        font-size: 0.8rem;
+                          }
+                }
+            }
+        }
+    }
+    .features-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin-bottom: 0.8rem;
+        @include r(500)  { 
+            grid-template-columns: auto;
+         }
+         
+         @include r(768)  { 
+            grid-template-columns: auto;
+         }
+        .feature-item {
+            position: relative;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 1rem;
+            margin: 0px 10px;
+            border-radius: 0.8rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            &.active{
+                border: 1px solid  #f2d23f;;
+            }
+            @include r(500)  { 
+                padding: 1rem 0.5rem;
+               margin: 0.5rem 0rem;
+             }
+             @include r(768x)  { 
+                padding: 1rem 0.5rem;
+               margin: 0.5rem 0rem;
+             }
+            .icon-circle {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #F7F7F7;
+                text-align: center;
+                line-height: 33px;
+                font-size: 24px;
+                position: relative;
+                margin-right: 1.3rem;
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+               
+            }
+            .feature-text {
+                font-size: 0.9rem;
+                .title-text {
+                    color: #000;
+                    font-weight: 500;
+                }
+                .caption-text {
+                    color: $textColorDark;
+                }
+            }
+            .selected-circle {
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border: 2px solid #e0e0e0;
+                background-color: #f7f7f7;
+
+              &.active{
+                border: none;
+                background-color: #f2d23f;
+              }
+            }
+        }
+    }
+    .sub-text {
+        font-family: "Myriad-Regular";
+        padding: 1.3rem 0rem 0rem;
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+    .food-container {
+        display: grid;
+       grid-template-columns: auto auto auto auto;
+        padding: 1.5rem 0rem 2rem;
+     
+        @include r(500)  { 
+            grid-template-columns: auto;
+            padding: 1rem 0.5rem 1.5rem;
+         }
+         @include r(768)  { 
+            grid-template-columns: auto auto;
+            padding: 1rem 0rem 1.5rem;
+            grid-gap: 1rem;
+         }
+        .food-item {
+            background-color: #fff;
+            text-align: center;
+            box-shadow: RGBA(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 0rem 0rem 0.5rem;
+            margin-right:1rem;
+            &:nth-child(4) {
+                margin-right: 0px;
+            }
+            @include r(500)  { 
+               width: 100%;
+               margin-bottom: 0.8rem;
+             
+             }
+             @include r(768)  { 
+                width: 100%;
+              
+              
+              }
+            img {
+                width: 100%;
+            }
+            h3{
+                text-transform: uppercase;
+                font-family: "Myriad-Bold";
+                @include r(500)  { 
+                  font-size: 0.9rem;
+                  
+                  }
+            }
+            .padding{
+                padding: 0.4rem 0rem;
+                @include r(500)  { 
+                   padding: 0.2rem 0rem;
+                    }
+            }
+            .cdn-padding{
+                padding: 1rem 0rem;
+                @include r(500)  { 
+                    padding: 0.5rem 0rem;
+                     }
+            }
+            .choice-val {
+                background-color: $darkColor;
+                color: #fff;
+                font-family: "Myriad-Regular";
+                width: fit-content;
+                text-align: center;
+                margin: 0 auto;
+                padding: 0.3rem 0.5rem;
+                line-height: 10px;
+                height: 20px;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                border-radius: 1rem;
+                margin-bottom: 0.3rem;
+                @include r(500)  { 
+                    font-size: 0.5rem;
+                     }
+            }
+            .food-description{
+                border-top: 1px solid #ced0d0;
+                border-bottom: 1px solid #ced0d0;
+                padding: 0.5rem 0rem;
+                font-family: "Myriad-Light";
+                font-size: 0.9rem;
+                text-align: center;
+                color: $textColor;
+                padding: 0.8rem 0.5rem;
+                @include r(500)  { 
+                    padding: 0.25rem 0.6rem;
+                    font-size: 0.8rem;
+                     }
+            }
+            .price{
+                font-family: "Myriad-Bold";
+                font-size: 1.3rem;
+                padding: 0.6rem 0rem;
+                @include r(500)  { 
+                    padding: 0.3rem 0rem;
+                    font-size: 0.9rem;
+                     }
+            }
+            .cart-total {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @mixin action($bgColor,$borderColor,$textColor) {
+                    font-size: 20px;
+                    padding: 0rem 0rem;
+                    margin-right: 10px;
+                    width: 30px;
+                    display: inline-block;
+                    border-radius: 5px;
+                    background-color: $bgColor;
+                    border: 1px solid $borderColor;
+                    color: $textColor;
+                    @include r(500)  { 
+                        padding: 0.25rem 0rem;
+                        font-size: 10px;
+                        width: 25px;
+                        text-align: center
+                         }
+                }
+                .item-count{
+                    @include r(500)  { 
+                       
+                        font-size: 0.9rem;
+                        
+                         }
+                }
+                .delete-action{
+                    @include action(#fff, $primaryColor,$primaryColor )
+                }
+                .add-action{
+                    @include action($primaryColor,$primaryColor, #fff );
+                    margin-left:10px
+                }
+            }
+           
+        }
+    }
+
+}
+
+
+
+

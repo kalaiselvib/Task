@@ -1,0 +1,154 @@
+@import "../../variables/variables.scss";
+@import "../fonts.scss";
+.header {
+  padding: 1.3rem 0rem;
+  background-color: $secondaryColor;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include r(500) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    @include r(768) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      @include r(500) {
+        width: 100%;
+      }
+      @include r(768) {
+        width: 100%;
+      }
+        .logo {
+            font-size: 1.3rem;
+            color: $primaryColor;
+            margin-right: 1.5rem;
+            @include r(500)  { 
+                height: 10px !important;
+            }
+          }
+          .toggle-icon {
+            border: 0;
+            height: 40px;
+            width: 40px;
+            padding: 0.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            display: none;
+            @include r(500) {
+              display: block;
+              float: right;
+            }
+            @include r(768) {
+              display: block;
+              float: right;
+            }
+          }
+    }
+    .menu-wrapper{
+      display: flex;
+      align-items: center;
+      transition: .3s transform ease-in-out;
+        @include r(500)  { 
+            display: none;
+             }
+             @include r(768)  { 
+              display: none;
+               }
+      
+        ul.menu-list {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            @include r(500)  { 
+             flex-direction: column;
+             padding: 10px 0px;
+               }
+               @include r(768)  { 
+                flex-direction: column;
+                padding: 10px 0px;
+                  }
+
+            li {
+              display: inline;
+              a {
+                font-family: "Myriad-Regular";
+                margin: 10px 14px;
+                text-transform: uppercase;
+                color: $textColorDark;
+                text-decoration: none;
+                @include r(500)  { 
+                  font-size: 0.8rem;
+                  margin: 10px 0px 0px 0px;
+                   }
+                   @include r(768)  { 
+                    font-size: 0.8rem;
+                    margin: 10px 0px 0px 0px;
+                     }
+              }
+            }
+          }
+          .login-section {
+            padding: 0rem 1rem 0rem 3rem;
+            @include r(500)  { 
+              padding: 0rem 0rem 0.5rem 0rem;
+               }
+               @include r(768)  { 
+                padding: 0rem 0rem 0.5rem 0rem;
+                 }
+            a {
+              color: #000;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-family: "Myriad-Regular";
+              margin-right: 10px;
+              @include r(500)  { 
+                  font-size: 0.8rem;
+                   }
+              &:nth-child(1) {
+                padding-right: 10px;
+                border-right: 1px solid #000;
+                
+              }
+            }
+          }
+          .action-icons {
+            font-size: 20px;
+            margin: 0rem 0rem 0rem 1rem;
+            @include r(500)  { 
+              font-size:18px;
+              margin: 0.5rem 0rem 0rem 0rem;
+               }
+               @include r(768)  { 
+                font-size:18px;
+                margin: 0.5rem 0rem 0rem 0rem;
+                 }
+      
+            span:nth-child(1) {
+              margin-right: 10px;
+              -moz-transform: scaleX(-1);
+              -o-transform: scaleX(-1);
+              -webkit-transform: scaleX(-1);
+              transform: scaleX(-1);
+              filter: FlipH;
+              -ms-filter: "FlipH";
+              padding: 0px 0rem;
+            }
+          }
+    }
+    .menu-wrapper.expanded{
+        display: block;
+    }
+  
+  }
+}

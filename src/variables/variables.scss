@@ -1,0 +1,57 @@
+
+$primaryColor: #07A8A2;
+$secondaryColor: #F5F5F5;
+$darkColor: #181818;
+$warningColor: #F2D23F;
+$textColor: #393939;
+$textColorDark: #0A0C10;
+$dangerColor: #EC3D6A;
+
+@mixin Button($bgColor , $width ,) {
+    width: $width;
+    color: #fff;
+    padding: 0.6rem 0.5rem;
+    background-color: $bgColor;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@mixin r( $point ) {
+	
+	// @if $point==375 {
+	// 	@media ( max-width: 375px ) {
+	// 		@content;
+	// 	}
+	// }
+	@if $point==500 {
+		@media ( max-width: 500px ) {
+			@content;
+		}
+	}
+	
+	@if $point==768 {
+		@media (min-width:501px) and ( max-width: 768px ) {
+			@content;
+		}
+	}
+	@if $point==1024 {
+		@media ( max-width: 1024px ) {
+			@content;
+		}
+	}
+	@if $point==1140 {
+		@media ( max-width: 1140px ) {
+			@content;
+		}
+	}
+	@if $point==1280 {
+		@media ( min-width: 1280px ) {
+			@content;
+		}
+	}
+	@if $point==1500 {
+		@media ( min-width: 1500px ) {
+			@content;
+		}
+	}
+}
